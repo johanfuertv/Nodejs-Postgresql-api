@@ -1,8 +1,11 @@
-CREATE DATABASE firstapi;
+CONNECT TO firstapi;
 
 CREATE TABLE users(
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    email VARCHAR(255),
-    password VARCHAR(255)
-)
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(40),
+	email TEXT
+);
+
+INSERT INTO users (name, email) VALUES
+('joe', 'joe@ibm.com'),
+('ryan', 'ryan@superhombre.com');
